@@ -1,4 +1,3 @@
-import React from 'react'
 import Button from '../ui/Button'
 import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
@@ -6,7 +5,7 @@ import { createClient } from '@supabase/supabase-js'
 
 const Header = () => {
 
-    const [cookies, setCookie, removeCookie] = useCookies([]);
+    const [cookies,] = useCookies([]);
     
     console.log(cookies['token' as keyof typeof cookies])
     const isLoggedIn = cookies['token' as keyof typeof cookies]
