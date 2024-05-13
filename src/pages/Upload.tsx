@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { ChangeEvent, useRef } from 'react'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import Button from '../components/ui/Button'
@@ -13,8 +13,9 @@ const Upload = () => {
         }
     }
     
-    const onFileSelect = (e) => {
-        console.log(e.target.files[0])
+    const onFileSelect = (e:ChangeEvent<HTMLInputElement>) => {
+        //console.log(e.target.files[0])
+        console.log(e)
     }
     return (
         <div className='h-screen flex flex-col justify-between py-10'>
